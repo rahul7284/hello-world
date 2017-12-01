@@ -1,0 +1,66 @@
+package com.ezest.practise.SampleTest;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Scanner;
+
+public class TestList {
+	public static void main(String[] args) throws IOException {
+
+		/*
+		 * BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		 * String name = br.readLine(); // Reading input from STDIN
+		 * System.out.println("Hi, " + name + "."); // Writing output to STDOUT
+		 */
+
+		Scanner s = new Scanner(System.in);
+		StringBuffer result = new StringBuffer();
+		/*
+		 * String name = s.nextLine(); // Reading input from STDIN
+		 * System.out.println("Hi, " + name + ".");
+		 */
+
+		Integer limit = s.nextInt();
+
+		while (limit > 0) {
+
+			Integer firstValue = s.nextInt();
+
+			for (int i = 0; i < firstValue; i++) {
+
+				System.out.println(result.append("c"));
+			}
+
+			Integer secValue = s.nextInt();
+
+			if (secValue < firstValue) {
+
+				int klimit = firstValue - secValue;
+
+				for (int i = 0; i < klimit; i++) {
+
+					System.out.println(result.append("k"));
+
+				}
+			}
+
+			if (secValue > firstValue) {
+
+				int klimit = firstValue - secValue;
+
+				for (int i = 0; i < klimit; i++) {
+
+					System.out.println(result.append("c"));
+
+				}
+			}
+
+			limit--;
+		}
+
+	}
+}
